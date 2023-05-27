@@ -2,10 +2,24 @@ Fix some errors during compilation openc under windows with mingw
 
 Set in Cmake
 ```
-CUDA = off
-ENABLE_PRECOMPILED_HEADERS = off
-doc  = off
-openexr = off
+BUILD_OPENEXR:BOOL=0
+BUILD_DOCS:BOOL=0
+CMAKE_NM:FILEPATH=C:/mingw64/bin/nm.exe
+CMAKE_C_COMPILER_RANLIB:FILEPATH=C:/mingw64/bin/x86_64-w64-mingw32-gcc-ranlib.exe
+CMAKE_CXX_COMPILER_AR:FILEPATH=C:/mingw64/bin/x86_64-w64-mingw32-gcc-ar.exe
+CMAKE_C_COMPILER_AR:FILEPATH=C:/mingw64/bin/x86_64-w64-mingw32-gcc-ar.exe
+CMAKE_CXX_COMPILER_RANLIB:FILEPATH=C:/mingw64/bin/x86_64-w64-mingw32-gcc-ranlib.exe
+WITH_CUDA:BOOL=0
+CMAKE_AR:FILEPATH=C:/mingw64/bin/ar.exe
+CMAKE_CXX_COMPILER:FILEPATH=C:/mingw64/bin/x86_64-w64-mingw32-c++.exe
+CMAKE_DLLTOOL:FILEPATH=C:/mingw64/bin/dlltool.exe
+CMAKE_CODEBLOCKS_EXECUTABLE:FILEPATH=CMAKE_CODEBLOCKS_EXECUTABLE-NOTFOUND
+CMAKE_C_COMPILER:STRING=C:/mingw64/bin/x86_64-w64-mingw32-gcc.exe
+OPENCV_EXTRA_MODULES_PATH:PATH=Z:/AI_SDK/CPP_GFPGAN/OPENCV_GIT/opencv/opencv_contrib-3.3.0/modules
+CMAKE_CXX_FLAGS_DEBUG:STRING=-g
+ENABLE_PRECOMPILED_HEADERS:BOOL=0
+WITH_OPENEXR:BOOL=0
+CMAKE_CXX_FLAGS:STRING=-std=c++14 -DWIN32
 ```
 //================= This options are for visual studio 
 ```
