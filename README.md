@@ -4,7 +4,7 @@ ENABLE_PRECOMPILED_HEADERS = off
 doc  = off
 openexr = off
 ```
-//================= These options are for visual studio 
+//================= This options are for visual studio 
 ```
 WITH_MSMF = off
 ENABLE_PRECOMPILED_HEADERS=OFF
