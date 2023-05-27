@@ -1,3 +1,4 @@
+Set in Cmake
 ```
 CUDA = off
 ENABLE_PRECOMPILED_HEADERS = off
