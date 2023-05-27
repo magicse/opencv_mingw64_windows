@@ -1,34 +1,28 @@
+```
 CUDA = off
-
 ENABLE_PRECOMPILED_HEADERS = off
-
 doc  = off
-
 openexr = off
-
+```
 //================= These options are for visual studio 
-
+```
 WITH_MSMF = off
-
 ENABLE_PRECOMPILED_HEADERS=OFF
-
 WITH_IPP=OFF
-
 WITH_TBB=OFF
-
+```
 //=================
-
+```
 opencv_extra_modules_path - set to opencv_contrib-3.3.0\modules
-
+```
 //=================
-
+```
 if errors  with - libIlmImf 
 set openexr = off
-
+```
 //=================
-
+```
 ERROR:
-
 modules/core/src/persistence_base64.cpp:167:31: error: comparing the result of pointer addition ‘(src + ((sizetype)off))’ and NULL [-Werror=address]
   167 |     if (src == 0 || src + off == 0)
 
@@ -52,9 +46,9 @@ new OpenCVCompilerOptions.cmake
 +  add_extra_compiler_option(-Wsequence-point)
   add_extra_compiler_option(-Wformat)
 +  add_extra_compiler_option(-Wformat-security -Wformat)
-
+```
 //=================
-
+```
 warnings 
 cc1plus.exe: warning: command-line option '-Wmissing-prototypes' is valid for C/ObjC but not for C++
 cc1plus.exe: warning: command-line option '-Wstrict-prototypes' is valid for C/ObjC but not for C++
@@ -64,18 +58,18 @@ change in OpenCVUtils.cmake
 -    "command line option .* is valid for .* but not for C" # GNU
 +    "command[- ]line option .* is valid for .* but not for C\\+\\+" # GNU
 +    "command[- ]line option .* is valid for .* but not for C" # GNU
-
+```
 //=================
-
+```
 No x86_64-w64-mingw32-windres.exe
 
 manually copy windres.exe to x86_64-w64-mingw32-windres.exe everything works for now.
-
+```
 //=================
-
+```
 x86_64-w64-mingw32-windres: unknown option -- W
 
 Solution:
 try this : in cmake uncheck ENABLE_PRECOMPILED_HEADERS
-
+```
 //=================
