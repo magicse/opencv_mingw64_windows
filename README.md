@@ -83,3 +83,34 @@ Make changes in file opencv/sources/modules/videoio/src/cap_dshow.cpp
 before this #include "DShow.h":  
 add this #define NO_DSHOW_STRSAFE upper of this #include "DShow.h"
 ```
+//=================
+```
+error include numeric __init = __binary_op(__init, *__first);
+
+Solution:
+set -DWIN32
+or set -std=c++14 -DWIN32
+```
+//=================
+```
+Error
+ int, cv::Mat&)':
+\opencv_contrib-3.3.0\modules\stereo\src\descriptor.cpp:229:34: error: ordered comparison of pointer with integer zero ('c
+onst int*' and 'int')
+  229 |             CV_Assert(image.size > 0);
+      |                       ~~~~~~~~~~~^~~
+
+\opencv_contrib-3.3.0\modules\stereo\src\descriptor.cpp:230:33: error: ordered comparison of pointer with integer zero ('c
+onst int*' and 'int')
+  230 |             CV_Assert(cost.size > 0);
+      |                       ~~~~~~~~~~^~~
+
+Solution:
+opencv\opencv_contrib-3.3.0\modules\stereo\src\descriptor.cpp
+in file descriptor.cpp
+
+09	-            CV_Assert(image.size > 0);
+10	-            CV_Assert(cost.size > 0);
+11	+            CV_Assert(*image.size > 0);
+12	+            CV_Assert(*cost.size > 0);
+```
