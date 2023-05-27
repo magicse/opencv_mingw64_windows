@@ -74,3 +74,12 @@ Solution:
 try this : in cmake uncheck ENABLE_PRECOMPILED_HEADERS
 ```
 //=================
+```
+Error
+opencv-3.3.0\modules\videoio\src\cap_dshow.cpp:2302:10: error: 'sprintf_instead_use_StringCbPrintfA_or_StringCchPrintfA'
+
+Solution:
+Make changes in file opencv/sources/modules/videoio/src/cap_dshow.cpp 
+before this #include "DShow.h":  
+add this #define NO_DSHOW_STRSAFE upper of this #include "DShow.h"
+```
