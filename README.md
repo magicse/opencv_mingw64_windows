@@ -1,3 +1,5 @@
+Fix some errors during compilation openc under windows with mingw
+
 Set in Cmake
 ```
 CUDA = off
