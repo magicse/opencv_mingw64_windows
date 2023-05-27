@@ -1,4 +1,4 @@
-Fix some errors during compilation openc under windows with mingw
+Fix some errors during compilation opencv under windows with mingw64
 
 Set in Cmake
 ```
