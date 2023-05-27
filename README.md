@@ -114,3 +114,26 @@ in file descriptor.cpp
 11	+            CV_Assert(*image.size > 0);
 12	+            CV_Assert(*cost.size > 0);
 ```
+//=================
+```
+Python compiling errors cv2.cpp:854:34: error: invalid conversion from 'const char*' to 'char*'
+
+Solution
+Search the output for errors. For me the solution was to add "const" in front of the "char* str", on the cv2.cpp file.
+
+char* str = PyString_AsString(obj);
+
+to
+
+const char* str = PyString_AsString(obj);
+```
+//=================
+```
+
+PROTOBUF compilig error
+I had replace -  ReturnCode { SUCCESS, ERROR }; in file command_line_interface_unittest.cc
+with ReturnCode { B_SUCCESS, B_ERROR };
+or 
+with ReturnCode { B_SUCCESS=0, B_ERROR=1 };
+and all compiled seccefuly. 
+```
