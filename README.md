@@ -1,5 +1,5 @@
 Fix some errors during compilation opencv under windows with mingw64
-
+Version of mingw x86_64-12.1.0-release-posix-seh-rt_v10-rev3
 Set in Cmake
 ```
 BUILD_OPENEXR:BOOL=0
