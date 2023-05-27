@@ -66,3 +66,16 @@ change in OpenCVUtils.cmake
 +    "command[- ]line option .* is valid for .* but not for C" # GNU
 
 //=================
+
+No x86_64-w64-mingw32-windres.exe
+
+manually copy windres.exe to x86_64-w64-mingw32-windres.exe everything works for now.
+
+//=================
+
+x86_64-w64-mingw32-windres: unknown option -- W
+
+Solution:
+try this : in cmake uncheck ENABLE_PRECOMPILED_HEADERS
+
+//=================
